@@ -58,7 +58,7 @@ plot4<- function() {
 ##data for plot 4.2
       plot2Data <- as.numeric(reduced$Voltage)   
 ## add the plot to the [1,2] position
-      plot(datetime,plot2Data,type="n",main="", 
+      plot(datetime,plot2Data,type="n",main="",  bg="white",
      
             ylab="Voltage")
 
@@ -69,10 +69,11 @@ plot4<- function() {
 ## get all the data for the sub_metering columns and plot them on one plot
 ## with a legend, no x-axis label and a y-axis label ("Energy sub metering")
 ## data for plot 4.3
-      plot3Data <- cleandf[selRows,c("Sub_metering_1","Sub_metering_2","Sub_metering_3")] 
+      plot3Data <- cleandf[selRows,
+            c("Sub_metering_1","Sub_metering_2","Sub_metering_3")] 
 ## add the plot to the [2,1] position
       with(plot3Data,plot(datetime,Sub_metering_1, xlab = "", 
-            ylab = "Energy sub metering", col="black",type = "n"))
+            ylab = "Energy sub metering", col="black",type = "n", bg="white"))
       with(plot3Data, lines(datetime,Sub_metering_1, type="l"))
       with(plot3Data,lines(datetime,Sub_metering_2, col="red"))
       with(plot3Data,lines(datetime,Sub_metering_3, col = "blue"))
@@ -89,7 +90,7 @@ plot4<- function() {
 ## data for plot 4.4
       plot4Data <- as.numeric(reduced$Global_reactive_power)   
 ## add the plot to the [2,2] position
-      plot(datetime,plot4Data,type="n",main="", 
+      plot(datetime,plot4Data,type="n",main="", bg="white",
             ylab="Global_reactive_power")
 
       lines(datetime,plot4Data,type="l")

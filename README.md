@@ -1,3 +1,20 @@
+## Updates to readme
+The original readme follows these comments. The files are fully commented, so the
+reader should be able to follow the code fairly easily. The code is normalized across all of the plots, so once the reviewer see how the data is being selected in one plot, the others will be fairly similar.
+
+For each plot, I read in the appropriate data, format the date column and get rid of the NA's. Then I work with the date and time to turn them into POSIX objects that I can subset to the correct days. Finally, I set up the plotting, including making sure the "figure" directory exists. I use the same png device for each plot, to make it easy on the reviewer. Finally, I open the png device, write the required data to it, and close the device. 
+
+Note that all of the .R files are at the top level directory and all of the .png files are written to the "figure" directory
+
+## Viewing the plots  
+To view the plots, you can look at them straight from github. However, you might want to view them in your favorite viewer, as they may look different. For example, on the windows viewer, the background is white, just like the example.
+Each plot is drawn by typing "plot" and the number
+Ex. to plot the Plot 1
+plot1()
+
+Note that the plots in the readme file are the original plots. As noted, my plots are in the "figure" folder
+
+
 ## Introduction
 
 This assignment uses data from
