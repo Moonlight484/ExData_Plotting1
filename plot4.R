@@ -95,7 +95,7 @@ plot4<- function() {
 
       lines(datetime,plot4Data,type="l")
    
-## close the device and write the file
+## close the device and write the file 
       dev.off()
    
    
