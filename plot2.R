@@ -31,7 +31,7 @@ plot2 <- function() {
       plot2Data <- as.numeric(reduced$Global_active_power)
 
 ## set up the plotting into the figures directory
-if(!file.exists("figure")) {
+      if(!file.exists("figure")) {
       dir.create(figure)
 }
 

@@ -46,7 +46,7 @@ plot4<- function() {
       plot1Data <- as.numeric(reduced$Global_active_power) 
 
 ## add the plot to the [1,1] position
-      plot(datetime,plot1Data,type="n",main="", bg="white",
+      plot(datetime,plot1Data,type="n",main="",
      
          xlab = "",  ylab="Global Active Power")
 
@@ -58,7 +58,7 @@ plot4<- function() {
 ##data for plot 4.2
       plot2Data <- as.numeric(reduced$Voltage)   
 ## add the plot to the [1,2] position
-      plot(datetime,plot2Data,type="n",main="",  bg="white",
+      plot(datetime,plot2Data,type="n",main="",  
      
             ylab="Voltage")
 
@@ -73,7 +73,7 @@ plot4<- function() {
             c("Sub_metering_1","Sub_metering_2","Sub_metering_3")] 
 ## add the plot to the [2,1] position
       with(plot3Data,plot(datetime,Sub_metering_1, xlab = "", 
-            ylab = "Energy sub metering", col="black",type = "n", bg="white"))
+            ylab = "Energy sub metering", col="black",type = "n"))
       with(plot3Data, lines(datetime,Sub_metering_1, type="l"))
       with(plot3Data,lines(datetime,Sub_metering_2, col="red"))
       with(plot3Data,lines(datetime,Sub_metering_3, col = "blue"))
@@ -90,7 +90,7 @@ plot4<- function() {
 ## data for plot 4.4
       plot4Data <- as.numeric(reduced$Global_reactive_power)   
 ## add the plot to the [2,2] position
-      plot(datetime,plot4Data,type="n",main="", bg="white",
+      plot(datetime,plot4Data,type="n",main="", 
             ylab="Global_reactive_power")
 
       lines(datetime,plot4Data,type="l")
